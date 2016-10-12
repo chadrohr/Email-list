@@ -12,6 +12,16 @@ function CodeWorksService(){
     $.post(createUserUrl, {user: user}, callback)
   }
   
+  self.editUser = function(user, callback){
+    $.ajax({
+      url: baseUrl+`/${user.id}`,
+      method: 'PUT',
+      data: {user: user},
+      success: callback
+    })
+  }
+  
   
   
 }
+

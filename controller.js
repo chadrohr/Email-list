@@ -32,6 +32,10 @@ function CodeWorksController(){
     $('#users').html(template)
   }
   
+  codeWorksService.editUser({id: 1, name: 'Jake Overall', email: 'jake@boisecodeworks.com'}, getUsers)
+  
+  
+  
   
   getUsers()
 }
